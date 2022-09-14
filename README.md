@@ -15,6 +15,8 @@
 1. Model is defined in `ednfc.py`
 2. `main.py` --> training
 3. `test.py` --> inference
+
+Some parts of the code are reused from [albumentations](https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/)
 ### Sample predictions on test set of [ISIC 2017 dataset](https://challenge.isic-archive.com/data/#2017)
 ![](https://github.com/shivgahlout/EDNFC-Net/blob/main/images/predictions.gif)
 
