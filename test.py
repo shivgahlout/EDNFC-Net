@@ -1,18 +1,10 @@
-
-
-
-from collections import defaultdict
 import copy
 import random
 import os
-import shutil
-from urllib.request import urlretrieve
-
-
+import shuti
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-# import ternausnet.models
 from tqdm import tqdm
 import torch
 import torch.backends.cudnn as cudnn
