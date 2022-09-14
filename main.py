@@ -78,6 +78,12 @@ def display_image_grid(images_filenames, images_directory, masks_directory, pred
     plt.tight_layout()
     plt.show()
  
+images_directory='./ISIC-2017_Training_Data'
+masks_directory='./ISIC-2017_Training_Part1_GroundTruth'
+test_images_filenames=os.listdir('./ISIC-2017_Training_Data')
+idx=idx=random.sample(range(1, 2000), 20)
+
+display_image_grid(np.array(test_images_filenames)[idx], images_directory, masks_directory)
 
 class NEPCDataset(Dataset):
     def __init__(self, images_filenames, images_directory, masks_directory, transform=None):
