@@ -79,42 +79,6 @@ def display_image_grid(images_filenames, images_directory, masks_directory, pred
     plt.show()
  
 
-
-images_directory='./ISIC-2017_Training_Data'
-masks_directory='./ISIC-2017_Training_Part1_GroundTruth'
-test_images_filenames=os.listdir('./ISIC-2017_Training_Data')
-idx=idx=random.sample(range(1, 2000), 20)
-display_image_grid(np.array(test_images_filenames)[idx], images_directory, masks_directory)
-
-
-example_image_filename = test_images_filenames[455]
-image = cv2.imread(os.path.join(images_directory, example_image_filename))
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-r_transform= A.augmentations.geometric.resize.Resize(height=256, width=256)
-c_transform= A.augmentations.crops.transforms.CenterCrop(height=256, width=256)
-resized_image = r_transform(image=image)['image']
-padded_image = F.pad(image, min_height=256, min_width=256)
-padded_constant_image = F.pad(image, min_height=256, min_width=256, border_mode=cv2.BORDER_CONSTANT)
-cropped_image = c_transform(image=image)['image']
-
-
-
-figure, ax = plt.subplots(nrows=1, ncols=5, figsize=(18, 10))
-ax.ravel()[0].imshow(image)
-ax.ravel()[0].set_title("Original image")
-ax.ravel()[1].imshow(resized_image)
-ax.ravel()[1].set_title("Resized image")
-ax.ravel()[2].imshow(cropped_image)
-ax.ravel()[2].set_title("Cropped image")
-ax.ravel()[3].imshow(padded_image)
-ax.ravel()[3].set_title("Image padded with reflection")
-ax.ravel()[4].imshow(padded_constant_image)
-ax.ravel()[4].set_title("Image padded with constant padding")
-plt.tight_layout()
-plt.show()
-
-
-
 class NEPCDataset(Dataset):
     def __init__(self, images_filenames, images_directory, masks_directory, transform=None):
         self.images_filenames = images_filenames
