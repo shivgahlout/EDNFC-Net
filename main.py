@@ -1,12 +1,7 @@
-
-
-
-from collections import defaultdict
 import copy
 import random
 import os
 import shutil
-from urllib.request import urlretrieve
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
