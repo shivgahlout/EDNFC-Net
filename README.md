@@ -1,8 +1,9 @@
 # EDNFC-Net
+![](https://img.shields.io/badge/PyTorch-1.7-blue) ![](https://img.shields.io/badge/Albumentations-1.2.1-blue) ![](https://img.shields.io/badge/OpenCV--Python-4.6.0-blue) ![](https://img.shields.io/badge/TorchMetrics-0.9.3-blue) ![](https://img.shields.io/badge/NumPy-1.20.2-blue) ![](https://img.shields.io/badge/Matplotlib-3.4.2-blue) ![](https://img.shields.io/badge/scikit--image-0.18.1-blue)
 ## PyTorch implementation of EDNFC-Net: Convolutional Neural Network with Nested Feature Concatenation for Nuclei-Instance Segmentation [[Publication Link]](https://ieeexplore.ieee.org/document/9053633)
 
 ![](https://github.com/shivgahlout/EDNFC-Net/blob/main/images/ednfc.gif)
-### Requirements
+<!--- ### Requirements
 - pytorch==1.7.1
 - albumentations==1.2.1
 - opencv-python==4.6.0
@@ -11,6 +12,7 @@
 - matplotlib==3.4.2
 - scikit-image 3.4.2
 - wandb (optional)
+--->
 ### Steps
 1. Model is defined in `ednfc.py`
 2. `main.py` --> training
