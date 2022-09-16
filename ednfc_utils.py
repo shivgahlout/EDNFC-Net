@@ -22,6 +22,9 @@ from enum import Enum
 from skimage.io import imsave
 from albumentations import*
 
+""" parts of code are reused from 1) https://github.com/pytorch/examples/blob/5a06e9cac1728c860b53ebfc6792e0a0e21a5678/imagenet/main.py#L403
+2) https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/ 3) https://haochen23.github.io/2020/06/fine-tune-mask-rcnn-pytorch.html """
+
 def preprocess_mask(mask):
     mask = mask.astype(np.float32)
     mask[(mask == 255.0)] = 1.0
