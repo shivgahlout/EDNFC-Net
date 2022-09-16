@@ -13,10 +13,11 @@
 - scikit-image 3.4.2
 - wandb (optional)
 --->
-### Steps
-1. Model is defined in `ednfc.py`
-2. `main.py` --> training
-3. `test.py` --> inference
+### Details
+1. `ednfc.py`--> network
+2. `ednfc_utils.py`--> supporting functions
+3. `main.py` --> training
+4. `test.py` --> inference
 
 Some parts of the code are reused from [albumentations](https://albumentations.ai/docs/examples/pytorch_semantic_segmentation/)
 ### Sample predictions on test set of [ISIC 2017 dataset](https://challenge.isic-archive.com/data/#2017)
